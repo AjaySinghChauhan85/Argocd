@@ -16,6 +16,7 @@ spec:
       containers:
         - name: online-shop-container
           image: crccheck/hello-world:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
           resources:
