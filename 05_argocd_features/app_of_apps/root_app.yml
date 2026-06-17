@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/AjaySinghChauhan85/Argocd.git   # Repo containing child apps
     targetRevision: argocd        # Git branch to track
-    path: app_of_apps/apps   # Path where child app manifests are stored
+    path: 05_argocd_features/app_of_apps/apps   # Path where child app manifests are stored
   destination:
     server: https://172.31.34.213:33893  # Deploying inside the same cluster
     namespace: argocd             # Applications (CRDs) must live in argocd namespace
