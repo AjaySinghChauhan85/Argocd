@@ -15,10 +15,10 @@ spec:
     spec:
       containers:
         - name: online-shop-container
-          image: crccheck/hello-world:latest
+          image: houssemeddine/restaurant-website:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8000
+            - containerPort: 80
           resources:
             requests:
               cpu: "250m"
