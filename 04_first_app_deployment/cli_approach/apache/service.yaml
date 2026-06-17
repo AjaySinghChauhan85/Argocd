@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: apache-service
+  namespace: default # Matches the namespace of your app destination
+spec:
+  type: ClusterIP
+  selector:
+    app: apache # This MUST match the labels in your deployment template
+  ports:
+    - protocol: TCP
+      port: 80         # The port exposed inside the cluster
+      targetPort: 80   # The containerPort your Apache container is listening on
