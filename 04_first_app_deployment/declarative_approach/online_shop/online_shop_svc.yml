@@ -6,7 +6,7 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    app: online-shop # Perfectly links to the deployment labels above
+    app: online-shop
   ports:
     - protocol: TCP
       port: 80
