@@ -18,7 +18,7 @@ spec:
           image: crccheck/hello-world:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 8000
           resources:
             requests:
               cpu: "250m"
