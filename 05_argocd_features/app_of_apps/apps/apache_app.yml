@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/AjaySinghChauhan85/Argocd.git
     targetRevision: argocd
-    path: 04_first_app_deployment/cli__approach/apache
+    path: 04_first_app_deployment/cli_approach/apache
   destination:
     server: https://172.31.34.213:33893
     namespace: default
