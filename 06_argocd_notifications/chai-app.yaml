@@ -8,9 +8,9 @@ metadata:
   annotations:
     # The email notifier must be configured in argocd-notifications-cm.yaml, The `.email` is the name of the notifier, i.e, `service.email` in the argocd-notifications-cm.yaml.
     # Subscribe to notifications when the app health is degraded.
-    notifications.argoproj.io/subscribe.on-health-degraded.email: "chauhanajay505@gmail.com"  # you can add multiple email ids separated by comma like "<receiver@example.com>, <receiver2@example.com>"
+    notifications.argoproj.io/subscribe.on-health-degraded.email: "xyz@example.com"  # you can add multiple email ids separated by comma like "<receiver@example.com>, <receiver2@example.com>"
     # Subscribe to notifications when the app is successfully deployed.
-    notifications.argoproj.io/subscribe.on-deployed.email: "chauhanajay505@gmail.com" # you can add multiple email ids separated by comma like "<receiver@example.com>, <receiver2@example.com>"
+    notifications.argoproj.io/subscribe.on-deployed.email: "xyz@example.com" # you can add multiple email ids separated by comma like "<receiver@example.com>, <receiver2@example.com>"
 spec:
   project: default # ArgoCD project this app belongs to
   source:
