@@ -1,0 +1,15 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: chai-app-updater
+  namespace: argocd
+spec:
+  # This links it directly to your Argo CD application name
+  applicationName: chai-app 
+  images:
+    - name: ajaysingh85/chai-devops
+      updateStrategy: semver
+  writeBack:
+    method: git
+    git:
+      secretName: argocd-image-updater-git-creds
