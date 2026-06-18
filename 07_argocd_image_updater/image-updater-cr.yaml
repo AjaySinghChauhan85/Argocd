@@ -4,12 +4,19 @@ metadata:
   name: chai-app-updater
   namespace: argocd
 spec:
-  # This links it directly to your Argo CD application name
-  applicationName: chai-app 
+  # 1. Point to your Argo CD application name using a pattern or exact match
+  applicationRefs:
+    - namePattern: "chai-app"
+
+  # 2. Map the image and assign your alias 'chai-app'
   images:
-    - name: ajaysingh85/chai-devops
-      updateStrategy: semver
-  writeBack:
-    method: git
-    git:
-      secretName: argocd-image-updater-git-creds
+    - alias: "chai-app"
+      imageName: "ajaysingh85/chai-devops"
+
+  # 3. Define global update strategy settings
+  commonUpdateSettings:
+    updateStrategy: "semver"
+
+  # 4. Configure the Git write-back method and credential secret
+  writeBackConfig:
+    method: "git:secret:argocd/argocd-image-updater-git-creds"
