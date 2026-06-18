@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chai-app
+  labels:
+    app: chai-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: chai-app
+  template:
+    metadata:
+      labels:
+        app: chai-app
+    spec:
+      containers:
+        - name: chai-container
+          # Image updater will target this image name and inject the correct version
+          image: ajaysingh85/chai-devops:v2.0.0 
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
