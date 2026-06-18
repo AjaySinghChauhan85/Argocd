@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# Aggregates your deployment, service, and secret configurations
+resources:
+  - deployment.yaml
+  - service.yaml
+  - secret-image-updater-git.yaml # <-- Added your secret file here
+
+# Ensures everything in this directory gets the right labels
+commonLabels:
+  app: chai-app
