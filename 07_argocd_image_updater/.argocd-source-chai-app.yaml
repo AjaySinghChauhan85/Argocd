@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - ajaysingh85/chai-devops:v2.2.1
