@@ -1,0 +1,17 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: chai-app-updater
+  namespace: argocd
+spec:
+  writeBackConfig:
+    method: "git:secret:argocd/argocd-image-updater-git-creds"
+    gitConfig:
+      branch: "argocd"
+  applicationRefs:
+    - namePattern: "chai-app"
+      images:
+        - alias: "chai-app"
+          imageName: "ajaysingh85/chai-devops"
+          commonUpdateSettings:
+            updateStrategy: "semver"
