@@ -21,7 +21,7 @@ spec:
     targetRevision: argocd        # Branch or tag to track in the repository
     path: 07_argocd_image_updater # Path within the repo where the manifests(kustomization) are located
   destination:
-    server: https://172.31.39.252:33893 # Kubernetes API server address (in-cluster)
+    server: https://172.31.32.65:33893 # Kubernetes API server address (in-cluster)
     namespace: default           # Namespace in the cluster where app resources will be deployed
   syncPolicy:
     automated:                  # Enables automated sync for the application

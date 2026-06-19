@@ -17,7 +17,7 @@ spec:
       containers:
         - name: chai-container
           # Image updater will target this image name and inject the correct version
-          image: ajaysingh85/chai-devops:v2.0.0 
+          image: ajaysingh85/chai-devops:v1.0.0 
           ports:
             - containerPort: 80
           resources:
