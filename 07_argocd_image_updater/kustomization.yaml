@@ -5,7 +5,7 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
-  - secret-image-updater-git.yaml # <-- Added your secret file here
+ 
 
 # Ensures everything in this directory gets the right labels
 commonLabels:
